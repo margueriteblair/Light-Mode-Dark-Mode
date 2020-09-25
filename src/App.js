@@ -1,11 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider} from 'styled-components'
+import {lightTheme, darkTheme} from './theme'
+import { globalStyles } from '.global'
 
 function App() {
   return (
-    <div >
-    </div>
+    
+    <ThemeProvider theme={lightTheme}>
+<>
+    <button>Toggle Theme</button>
+    <h1>It's light theme, bitch!</h1>
+    <footer>
+    </footer>
+</>
+    </ThemeProvider>
+    
   );
 }
 
