@@ -11,7 +11,6 @@ export default function Input(props) {
         onChange={props.onChange}
         type={props.type}
         placeholder={props.ph}
-        style={{...defaultStyle, ...props.style}}
         />
     )
 }

@@ -3,6 +3,8 @@ import { ThemeProvider} from 'styled-components'
 import {lightTheme, darkTheme} from './theme'
 import { GlobalStyles } from './global'
 import Button from './Button'
+import {BrowserRouter} from 'react-router-dom'
+import AppRouter from './AppRouter'
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -15,7 +17,7 @@ function App() {
     }
   }
   return (
-    
+<BrowserRouter>
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
 <>
     <GlobalStyles />
@@ -26,11 +28,12 @@ function App() {
         <Button text='Login'></Button>
         <Button text="Register" ></Button>
   </div>
+  <AppRouter/>
     <footer>
     </footer>
 </>
     </ThemeProvider>
-    
+    </BrowserRouter>
   );
 }
 

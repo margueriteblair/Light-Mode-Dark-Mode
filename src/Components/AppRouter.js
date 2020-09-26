@@ -13,14 +13,6 @@ export default function AppRouter() {
 
     return (
         <div>
-            {/* <button
-                onClick={() => {
-                    setTheme( prevTheme => 
-                    { return !prevTheme})
-                }}
-            >
-            {!theme ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            </button> */}
         <Switch>
             <Route
                 path='/' exact>
@@ -36,15 +28,6 @@ export default function AppRouter() {
             >
                 <Register />
             </Route>
-            <Route
-                path='/'
-                >
-                    <div>
-                        <h1>
-                            404
-                        </h1>
-                    </div>
-                </Route>
         </Switch>
         </div>
     )

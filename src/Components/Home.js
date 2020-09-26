@@ -1,32 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
 // import useTheme from '../hooks/useTheme'
 import {useTheme} from '../hooks/ThemeContext'
 
 export default function Home() {
+    const [theme, setTheme] = useState('light')
 
+    const toggleTheme = () => {
+      if (theme === 'light') {
+        setTheme('dark')
+      } else {
+        setTheme('light')
+      }
+    }
     const loginLink = '/login';
     const regLink = '/register';
     return (
         <div>
-            <h1>
-                Welcome To Our Service
-            </h1>
-            <h2>
-                {useTheme() ? "You're in Light Mode" : "You're in Dark Mode"}
-            </h2>
-            <br/>
-
-            <Button 
-            onClick= {() => {window.location = loginLink}}
-            text='Login button'
-            style={{color: 'white', backgroundColor: 'black'}}
-            />
-
-            <Button 
-            onClick= {() => {window.location = regLink}}
-            text='Register button'
-            />
+        <button onClick={toggleTheme}>Toggle Theme</button>
+        <h1>{theme === 'light' ? "It's light theme, bitch!" : "Welcome to the darkside."}</h1>
+        <h3>{theme === 'light' ? 'Please choose an option below:' : 'Oh, and welcome to our application:'}</h3>
+    <div className="homepageBtns" style={{justifyContent: "space-evenly", textAlign: "center", flexDirection: "row", display: "flex"}}>
+        <Button text='Login'></Button>
+        <Button text="Register" ></Button>
+        </div>
         </div>
     )
 }

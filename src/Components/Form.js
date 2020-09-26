@@ -39,6 +39,6 @@ export default function Form(props) {
                 text={'Submit'}
                 onClick={buttonOnclick}
             />
-
+        </div>
     )
 }
