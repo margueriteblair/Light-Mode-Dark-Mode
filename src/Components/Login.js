@@ -11,15 +11,12 @@ export default function Login() {
 
     return (
         <div>
-            <h1>
-                Login To Your Account
-            </h1>
             <br/>
 
             <Form
                 id='loginForm'
                 inputs={loginInputs}
-                title='Login!'
+                title='Login to Your Account!'
                 submitFunc={loginReq}
             />
             

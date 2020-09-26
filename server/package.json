@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Rest API that will allow registration and logging in for a public end user.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "fullstack": "concurrently \"npm run dev\" \"cd ../src && npm start\"",
+    "dev": "nodemon server.js",
+    "pro": "node server.js"
+  },
+  "author": "Marguerite Blair",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.7",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "validator": "^13.1.17"
+  }
+}
