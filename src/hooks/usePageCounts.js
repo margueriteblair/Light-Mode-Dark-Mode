@@ -4,7 +4,7 @@ const {get, set} = require('../utils/localStorage')
 
 export default function usePageCounts(initial) {
 
-    const [pageCount, setPageCount] = useState(() => {
+    let [pageCount, setPageCount] = useState(() => {
         return get('page-count', initial)
     })
 

@@ -5,9 +5,11 @@ import { GlobalStyles } from './global'
 import Button from './Button'
 import {BrowserRouter} from 'react-router-dom'
 import AppRouter from './AppRouter'
+import usePageCount from '../hooks/usePageCounts'
 
 function App() {
   const [theme, setTheme] = useState('light')
+  const [pageCount, setPageCount] = usePageCount(0)
 
   const toggleTheme = () => {
     if (theme === 'light') {
@@ -27,7 +29,12 @@ function App() {
     <GlobalStyles />
     <button onClick={toggleTheme}>Toggle Theme</button>
         <h1>{theme === 'light' ? "It's light theme, bitch!" : "Welcome to the darkside."}</h1>
-        <h3>{theme === 'light' ? 'Please choose an option below:' : 'Oh, and welcome to our application:'}</h3>  
+        <h3>{theme === 'light' ? 'Please choose an option below:' : 'Oh, and welcome to our application:'}</h3>
+
+        <Button
+        onClick={() => {setPageCount(0)}}
+        text={`Rest Page Count: ${pageCount}`}
+        />  
     <AppRouter/>
     <footer>
     </footer>
