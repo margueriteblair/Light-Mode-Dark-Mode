@@ -35,4 +35,6 @@ app.use('/user', userRouter);
 //Connect to Data-Base
 mongoConnect(URI)
 //Start server listening on port
-app.listen(PORT);
+app.listen(PORT, () => {
+   'Currently listening to port ' + PORT
+});
