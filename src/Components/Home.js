@@ -14,11 +14,21 @@ export default function Home() {
         setTheme('light')
       }
     }
+    
     const loginLink = '/login';
     const regLink = '/register';
     return (
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <GlobalStyles/>
         <div>
-            
+        <button onClick={toggleTheme}>Toggle Theme</button>
+        <h1>{theme === 'light' ? "It's light theme, bitch!" : "Welcome to the darkside."}</h1>
+        <h3>{theme === 'light' ? 'Please choose an option below:' : 'Oh, and welcome to our application:'}</h3>
+        <div className="homepageBtns" style={{justifyContent: "space-evenly", textAlign: "center", flexDirection: "row", display: "flex"}}>
+        <Button text='Login' onClick= {() => {window.location.href = loginLink}}></Button>
+        <Button text="Register" onClick= {() => {window.location.href = regLink}} ></Button>
+  </div>
         </div>
+        </ThemeProvider>
     )
 }

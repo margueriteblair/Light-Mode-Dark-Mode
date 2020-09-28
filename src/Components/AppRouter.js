@@ -8,7 +8,6 @@ import Control from './Control';
 
 export default function AppRouter() {
 
-    const [ theme, setTheme ] = useTheme(true);
 
 
     return (
