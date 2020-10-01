@@ -1,20 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './Button'
-import User from '../utils/userLogin';
-import { ThemeProvider} from 'styled-components'
-import {lightTheme, darkTheme} from './theme'
-import { GlobalStyles } from './global'
 
 export default function Home(props) {
-    const [theme, setTheme] = useState('light')
-
-    const toggleTheme = () => {
-      if (theme === 'light') {
-        setTheme('dark')
-      } else {
-        setTheme('light')
-      }
-    }
     const loginLink = '/login';
     const regLink = '/register';
     if (props.loggedIn) {
@@ -22,7 +9,6 @@ export default function Home(props) {
         <div>
           <h1>Welcome, {props.user}</h1>
           <img src='../utils/KoolAid.gif'/>
-          <Button text="Logout" onClick={() => { User.logOut(); window.location = '/'}}></Button>
         </div>
       )
     } else {
