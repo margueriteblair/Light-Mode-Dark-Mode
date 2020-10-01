@@ -1,5 +1,5 @@
 const {default: axios} = require('axios');
-const baseURL  = 'http://localhost:4000';
+const baseURL  = 'http://localhost:3000';
 const loginURL = `${baseURL}/user/login`
 
 export default class User {
