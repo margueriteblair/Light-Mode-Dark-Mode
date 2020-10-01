@@ -31,10 +31,10 @@ function App() {
         <h1>{theme === 'light' ? "It's light theme, bitch!" : "Welcome to the darkside."}</h1>
         <h3>{theme === 'light' ? 'Please choose an option below:' : 'Oh, and welcome to our application:'}</h3>
 
-        <Button
-        onClick={() => {setPageCount(0)}}
-        text={`Rest Page Count: ${pageCount}`}
-        />  
+      <Button
+      onClick={() => {setPageCount(0)}}
+      text={`Rest Page Visits: ${pageCount}`}
+      />  
     <AppRouter/>
     <footer>
     </footer>
