@@ -1,4 +1,4 @@
-Practicing making a light mode and dark mode for application to then later implement into my social media project.
+Social media login project. Includes a React hook to allow the user to track how many times they have been on a page while logged in.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
